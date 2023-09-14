@@ -68,4 +68,8 @@ ejecuta: docker-compose build
 
 posteriormente para levantar las imagenes: docker-compose up
 
+entrar a la terminal de docker: docker exec -it mysql /bin/bash
+
+acceder al cliente de mysql: mysql -u root -p
+
 contraseña root de la base de datos docker: db_root_password
