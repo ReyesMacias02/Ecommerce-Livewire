@@ -61,3 +61,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# Ecommerce-Livewire" 
+
+
+lo que se hizo con docker
+ejecuta: docker-compose build
+
+posteriormente para levantar las imagenes: docker-compose up
+
+contraseña root de la base de datos docker: db_root_password
