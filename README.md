@@ -73,3 +73,29 @@ entrar a la terminal de docker: docker exec -it mysql /bin/bash
 acceder al cliente de mysql: mysql -u root -p
 
 contraseña root de la base de datos docker: db_root_password
+
+
+
+
+Proceso De Prueba de Docker
+
+Ejecutar 
+- docker-compose build
+
+Ejecutar para levantar y crear el contenedor
+- docker-compose up
+
+Ejecutar para acceder al contenedor
+- docker exec -it applaravel /bin/bash
+
+Ejecutar para linkiar el storage
+- php artisan storage:link
+
+Ejecutar para migrar las tablas
+- php artisan migrate
+
+Ejecutar para almacenar datos a la tablas
+- php artisan db:seed
+
+Abrir en un navegador y colocar la URL:
+- http://localhost:8000
