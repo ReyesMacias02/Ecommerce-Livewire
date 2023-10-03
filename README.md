@@ -99,3 +99,25 @@ Ejecutar para almacenar datos a la tablas
 
 Abrir en un navegador y colocar la URL:
 - http://localhost:8000
+
+
+Proceso De Prueba de la base de datos:
+
+Ingresar al bash de mysql
+- docker exec -it mysql /bin/bash
+
+Ingresar dentro de la BD.
+- mysql -u db_user -p
+
+Ver las Bases de Datos:
+- SHOW DATABASES;
+
+Para hacer el uso de la base de datos: 
+- use ecommerce;
+
+Ver las tablas:
+- SHOW TABLES;
+
+Ver los datos de una tabla: 
+- SELECT * FROM images;
+
