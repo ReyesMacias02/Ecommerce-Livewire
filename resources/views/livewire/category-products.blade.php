@@ -8,9 +8,19 @@
                     
                     <li class="bg-white rounded-lg shadow {{ $loop->last ? '' : 'sm:mr-4' }}">
                         <article>
-                            <figure>
-                                <img class="h-48 w-full object-cover object-center"  src="{{ asset('/storage/' .  $product->images) }}" alt="">
-                            </figure>
+                        
+                                
+                               <figure>
+                                @if ($product->images->count() > 0)
+    <img class="h-48 w-full object-cover object-center" src="{{ asset('storage/' . $product->images->first()->url) }}" alt="">
+@else
+   
+@endif
+
+                            </figure>   
+                                
+                        
+                          
 
                         <div class="py-4 px-6">
                                 <h1 class="text-lg font-semibold">

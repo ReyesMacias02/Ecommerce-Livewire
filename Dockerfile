@@ -20,12 +20,15 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs 
-
 RUN chmod +x /home
 
 RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
 WORKDIR /var/www
+
+# Create the /var/www/storage directory and set ownership
+RUN mkdir -p /var/www/storage && \
+    chown -R $user:www-data /var/www/storage
 
 USER $user
