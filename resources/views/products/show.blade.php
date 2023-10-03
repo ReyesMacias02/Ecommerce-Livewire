@@ -5,14 +5,14 @@
                 <div class="flexslider">
                     <ul class="slides">
                         @foreach ($product->images as $image)
-                        <!--
+                      
                             
                                 <li data-thumb=" {{ Storage::url($image->url) }}">
                                 <img  src="{{ asset('/storage/' . $image->url) }}" />
                             </li>
 
                             
-                        -->
+                    
                         
                         @endforeach
                         
