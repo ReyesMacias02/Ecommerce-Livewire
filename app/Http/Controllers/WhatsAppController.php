@@ -12,6 +12,6 @@ class WhatsAppController extends Controller
         $nombre = "Eber";
         $numero = "0999999999";
 
-        return view('whatsapp', compact('nombre', 'numero'));
+        return view('admin.whatsapp.whatsapp', compact('nombre', 'numero'));
     }
 }

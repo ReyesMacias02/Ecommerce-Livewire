@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>WhatsApp</title>
+<x-admin-layout>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -39,9 +36,8 @@
             background-color: #128c7e;
         }
     </style>
-</head>
-<body>
-    <div class="container">
+    <div>
+        <div class="container">
         <h1>¡Contáctanos en WhatsApp!</h1>
         <p>Estado: <span id="whatsapp-status-badge">Disponible</span></p>
         <p>Nombre: {{ $nombre }}</p>
@@ -59,5 +55,10 @@
             window.open(whatsappLink, '_blank');
         });
     </script>
-</body>
-</html>
+    
+    </div>
+    
+
+</x-admin-layout>
+
+
