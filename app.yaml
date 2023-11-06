@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-deployment
+  labels:
+    app: ecommerce-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce-app
+  template:
+    metadata:
+      labels:
+        app: ecommerce-app
+    spec:
+      containers:
+      - name: ecommerce-app
+        image: gcr.io/direct-outlet-401516/ecommerce-app-laravel
+        ports:
+        - containerPort: 8000
+
+
