@@ -121,3 +121,4 @@ Ver las tablas:
 Ver los datos de una tabla: 
 - SELECT * FROM images;
 
+yandry vale vrh
