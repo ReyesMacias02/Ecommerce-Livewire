@@ -1,36 +1,6 @@
 <x-app-layout>
 
-    <style>
-        /* Estilos para hacer que el chatbot sea flotante en la esquina superior derecha */
-        #chatbot-container {
-            position: fixed;
-            top: 20px; /* Ajusta la distancia desde la parte superior según tu preferencia */
-            right: 20px; /* Ajusta la distancia desde la derecha según tu preferencia */
-            width: 300px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-        }
-
-        /* Estilos para el botón de enviar */
-        #send-message {
-            background-color: #3490dc;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        #send-message:hover {
-            background-color: #2779bd;
-        }
-    </style>
+  
 
     <!-- Contenedor del chatbot flotante -->
     <div id="chatbot-container">

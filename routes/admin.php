@@ -14,11 +14,13 @@ use App\Http\Livewire\Admin\ShowDepartment;
 use App\Http\Livewire\Admin\CityComponent;
 use App\Http\Livewire\Admin\UserComponent;
 
-use App\Http\Controllers\WhatsAppController; // Importa el controlador de WhatsApp
+
+
+use App\Http\Livewire\Admin\WhatsAppComponent;
 
 Route::get('/', ShowProducts::class)->name('admin.index');
 
-Route::get('/whatsapp', [WhatsAppController::class, 'whatsapp'])->name('admin.whatsapp'); // Define la ruta de WhatsApp
+Route::get('/whatsapp', WhatsAppComponent::class)->name('admin.whatsapp'); // Define la ruta de WhatsApp
 
 Route::get('products/create', CreateProduct::class)->name('admin.products.create');
 Route::get('products/{product}/edit', EditProduct::class)->name('admin.products.edit');
