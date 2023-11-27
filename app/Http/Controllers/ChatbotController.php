@@ -9,6 +9,7 @@ class ChatbotController extends Controller
 {
     public function handle()
     {
+        dd("llego emit");
         $botman = app('botman');
 
         $botman->hears('Hola', function (BotMan $bot) {
