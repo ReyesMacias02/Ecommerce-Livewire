@@ -51,6 +51,12 @@
                             </x-jet-dropdown-link>
                         @endrole
 
+                        @role('admin')
+                            <x-jet-dropdown-link href="{{ route('admin.whatsapp') }}">
+                                WhatsApp
+                            </x-jet-dropdown-link>
+                        @endrole
+
                         <div class="border-t border-gray-100"></div>
 
                         <!-- Authentication -->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Auth;
 use Livewire\Component;
 
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -41,6 +42,10 @@ class AddCartItem extends Component
         $this->quantity = qty_available($this->product->id);
 
         $this->reset('qty');
+        $message = 'Hola ' . Auth::user()->name . " usted acaba de agregar el producto " . $this->product->name . ' en nuestra tienda';
+
+  // Emitir el evento con datos
+  $this->emit('messageSent', ['phone' =>  Auth::user()->phone, 'message' => $message]);
 
         $this->emitTo('dropdown-cart', 'render');
     }

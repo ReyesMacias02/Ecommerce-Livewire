@@ -36,4 +36,34 @@
             </x-button>
         </div>
     </div>
+    @push('script')
+        <script>
+            document.addEventListener('livewire:load', function () {
+    Livewire.on('messageSent', (data) => {
+        const phone = data.phone;
+        const message = data.message;
+        // Realizar la solicitud GET para enviar el mensaje de WhatsApp
+        fetch(
+        `http://localhost:8000/api/sendText?phone=${phone}&text=${encodeURIComponent(message)}&session=default`
+        , {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                // Agrega cualquier otra cabecera necesaria
+            },
+            // Puedes agregar más opciones de configuración según tus necesidades
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Manejar la respuesta si es necesario
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+});
+
+        </script>
+    @endpush
 </div>

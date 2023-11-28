@@ -89,7 +89,7 @@ Ejecutar para acceder al contenedor
 - docker exec -it applaravel /bin/bash
 
 Ejecutar para linkiar el storage
-- php artisan storage:link
+-php artisan storage:link
 
 Ejecutar para migrar las tablas
 - php artisan migrate
