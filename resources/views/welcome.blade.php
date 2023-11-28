@@ -31,7 +31,7 @@
             background-color: #2779bd;
         }
     </style>
-
+ @livewire('chatbot')
     <div class="container py-8">
         @foreach ($categories as $category)   
             <section class="mb-6">
