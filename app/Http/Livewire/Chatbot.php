@@ -13,7 +13,7 @@ class Chatbot extends Component
     public $open = false;
     
     function chatbot()  {
-        dd("llego el emit");
+       // dd("llego el emit");
     }
     public function render()
     {
