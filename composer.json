@@ -20,6 +20,8 @@
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
         "mercadopago/dx-php": "3.0",
+        "nuwave/lighthouse": "^5.71",
+        "rebing/graphql-laravel": "^8.6",
         "spatie/laravel-permission": "^4.2",
         "symfony/cache": "^6.3"
     },

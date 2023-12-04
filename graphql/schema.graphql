@@ -1,0 +1,35 @@
+type Query {
+    product(id: ID!): Product @find
+    products: [Product!]! @paginate(defaultCount: 10)
+}
+
+type Mutation {
+    createProduct(input: ProductInput!): Product @create
+    updateProduct(id: ID!, input: ProductInput!): Product @update
+    deleteProduct(id: ID!): Product @delete
+}
+
+type Product {
+    id: ID!
+    name: String!
+    slug: String!
+    description: String!
+    price: Float!
+    subcategory_id: ID!
+    brand_id: ID!
+    quantity: Int
+    status: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+input ProductInput {
+    name: String!
+    slug: String!
+    description: String!
+    price: Float!
+    subcategory_id: ID!
+    brand_id: ID!
+    quantity: Int
+    status: String!
+}
