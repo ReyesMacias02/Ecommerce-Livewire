@@ -31,8 +31,7 @@
             background-color: #2779bd;
         }
     </style>
-
-  @livewire('chatbot')
+ @livewire('chatbot')
     <div class="container py-8">
         @foreach ($categories as $category)   
             <section class="mb-6">
@@ -75,6 +74,7 @@
                     endpoint: '{{ route('chatbot') }}',
                 },
             });
+            console.log("Belen te amo");
 
             // Escucha las respuestas del chatbot
             botman.listen(function (message) {

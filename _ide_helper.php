@@ -18020,6 +18020,354 @@
      
 }
 
+    namespace Nuwave\Lighthouse { 
+            /**
+     * The main entrypoint to GraphQL execution.
+     *
+     */ 
+        class GraphQL {
+         
+    }
+     
+}
+
+    namespace Rebing\GraphQL\Support\Facades { 
+            /**
+     * The main entrypoint to GraphQL execution.
+     *
+     */ 
+        class GraphQL {
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function schema($schemaName = null)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->schema($schemaName);
+        }
+                    /**
+         * 
+         *
+         * @param array<string,mixed>|null $variables Optional GraphQL input variables for your query/mutation
+         * @param array<string,mixed> $opts Additional options, like 'schema', 'context' or 'operationName'
+         * @return array<string,mixed> 
+         * @static 
+         */ 
+        public static function query($query, $variables = null, $opts = [])
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->query($query, $variables, $opts);
+        }
+                    /**
+         * 
+         *
+         * @param array<string,mixed>|null $variables Optional GraphQL input variables for your query/mutation
+         * @param array<string,mixed> $opts Additional options, like 'schema', 'context' or 'operationName'
+         * @static 
+         */ 
+        public static function queryAndReturnResult($query, $variables = null, $opts = [])
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->queryAndReturnResult($query, $variables, $opts);
+        }
+                    /**
+         * 
+         *
+         * @param mixed $rootValue
+         * @param mixed $contextValue
+         * @return array<string,mixed> 
+         * @static 
+         */ 
+        public static function execute($schemaName, $operationParams, $rootValue = null, $contextValue = null)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->execute($schemaName, $operationParams, $rootValue, $contextValue);
+        }
+                    /**
+         * 
+         *
+         * @param array<int|string,string> $types
+         * @static 
+         */ 
+        public static function addTypes($types)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->addTypes($types);
+        }
+                    /**
+         * 
+         *
+         * @param object|string $class
+         * @static 
+         */ 
+        public static function addType($class, $name = null)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->addType($class, $name);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function type($name, $fresh = false)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->type($name, $fresh);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getType($name, $fresh = false)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->getType($name, $fresh);
+        }
+                    /**
+         * 
+         *
+         * @param \GraphQL\Type\Definition\ObjectType|array<int|string,class-string|array<string,mixed>>|string $type
+         * @param array<string,string> $opts
+         * @static 
+         */ 
+        public static function objectType($type, $opts = [])
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->objectType($type, $opts);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addSchema($name, $schema)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->addSchema($name, $schema);
+        }
+                    /**
+         * 
+         *
+         * @param array<string,mixed> $schemaConfig
+         * @static 
+         */ 
+        public static function buildSchemaFromConfig($schemaConfig)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->buildSchemaFromConfig($schemaConfig);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function clearType($name)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->clearType($name);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function clearSchema($name)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->clearSchema($name);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function clearTypes()
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->clearTypes();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function clearSchemas()
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->clearSchemas();
+        }
+                    /**
+         * 
+         *
+         * @return array<string,object|string> 
+         * @static 
+         */ 
+        public static function getTypes()
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->getTypes();
+        }
+                    /**
+         * 
+         *
+         * @return array<Schema> 
+         * @static 
+         */ 
+        public static function getSchemas()
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->getSchemas();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function paginate($typeName, $customName = null)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->paginate($typeName, $customName);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function simplePaginate($typeName, $customName = null)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->simplePaginate($typeName, $customName);
+        }
+                    /**
+         * To add customs result to the query or mutations.
+         *
+         * @param string $typeName The original type name
+         * @param string $customTypeName The new type name
+         * @param \Rebing\GraphQL\class-string<Type> $wrapperTypeClass The class to create the new type
+         * @static 
+         */ 
+        public static function wrapType($typeName, $customTypeName, $wrapperTypeClass)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->wrapType($typeName, $customTypeName, $wrapperTypeClass);
+        }
+                    /**
+         * 
+         *
+         * @see \GraphQL\Executor\ExecutionResult::setErrorFormatter
+         * @return array<string,mixed> 
+         * @static 
+         */ 
+        public static function formatError($e)
+        {
+                        return \Rebing\GraphQL\GraphQL::formatError($e);
+        }
+                    /**
+         * 
+         *
+         * @param \Error[] $errors
+         * @return \Error[] 
+         * @static 
+         */ 
+        public static function handleErrors($errors, $formatter)
+        {
+                        return \Rebing\GraphQL\GraphQL::handleErrors($errors, $formatter);
+        }
+                    /**
+         * 
+         *
+         * @return array<string,array<string,mixed>> 
+         * @static 
+         */ 
+        public static function getNormalizedSchemasConfiguration()
+        {
+                        return \Rebing\GraphQL\GraphQL::getNormalizedSchemasConfiguration();
+        }
+                    /**
+         * 
+         *
+         * @return array<string,mixed> 
+         * @static 
+         */ 
+        public static function getNormalizedSchemaConfiguration($schemaName)
+        {
+                        return \Rebing\GraphQL\GraphQL::getNormalizedSchemaConfiguration($schemaName);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function decorateExecutionResult($executionResult)
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->decorateExecutionResult($executionResult);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getConfigRepository()
+        {
+                        /** @var \Rebing\GraphQL\GraphQL $instance */
+                        return $instance->getConfigRepository();
+        }
+                    /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+                        \Rebing\GraphQL\GraphQL::macro($name, $macro);
+        }
+                    /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin, $replace = true)
+        {
+                        \Rebing\GraphQL\GraphQL::mixin($mixin, $replace);
+        }
+                    /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+                        return \Rebing\GraphQL\GraphQL::hasMacro($name);
+        }
+                    /**
+         * Flush the existing macros.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function flushMacros()
+        {
+                        \Rebing\GraphQL\GraphQL::flushMacros();
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -18134,6 +18482,93 @@
         public static function assertDontSeeLivewire($component)
         {
                         return \Illuminate\Testing\TestResponse::assertDontSeeLivewire($component);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLValidationError()
+         * @param string $key
+         * @param string|null $message
+         * @static 
+         */ 
+        public static function assertGraphQLValidationError($key, $message)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLValidationError($key, $message);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLValidationKeys()
+         * @param array $keys
+         * @static 
+         */ 
+        public static function assertGraphQLValidationKeys($keys)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLValidationKeys($keys);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLValidationPasses()
+         * @static 
+         */ 
+        public static function assertGraphQLValidationPasses()
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLValidationPasses();
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLError()
+         * @param \Throwable $error
+         * @static 
+         */ 
+        public static function assertGraphQLError($error)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLError($error);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLErrorMessage()
+         * @param string $message
+         * @static 
+         */ 
+        public static function assertGraphQLErrorMessage($message)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLErrorMessage($message);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLDebugMessage()
+         * @param string $message
+         * @static 
+         */ 
+        public static function assertGraphQLDebugMessage($message)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLDebugMessage($message);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLErrorFree()
+         * @static 
+         */ 
+        public static function assertGraphQLErrorFree()
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLErrorFree();
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLErrorCategory()
+         * @param string $category
+         * @static 
+         */ 
+        public static function assertGraphQLErrorCategory($category)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLErrorCategory($category);
         }
          
     }
@@ -21769,6 +22204,8 @@ namespace  {
             class Flare extends \Facade\Ignition\Facades\Flare {}
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
             class Livewire extends \Livewire\Livewire {}
+            class graphql extends \Nuwave\Lighthouse\GraphQL {}
+            class GraphQL extends \Rebing\GraphQL\Support\Facades\GraphQL {}
      
 }
 

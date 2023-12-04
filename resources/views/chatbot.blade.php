@@ -4,7 +4,7 @@
         <h3 class="text-lg font-semibold text-gray-700 mb-2">Chatbot</h3>
         <div id="chat-messages" style="max-height: 200px; overflow-y: auto;"></div>
         <input type="text" id="user-message" class="w-full border rounded-lg p-2 mt-2" placeholder="Escribe un mensaje...">
-        <button id="send-message" class="bg-blue-500 text-white rounded-lg px-4 py-2 mt-2">Enviar</button>
+        <button href="{{ route('chatbot') }}" id="send-message" class="bg-blue-500 text-white rounded-lg px-4 py-2 mt-2">Enviar</button>
     </div>
 
     <div class="container py-8">
