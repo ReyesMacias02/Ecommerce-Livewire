@@ -18020,6 +18020,69 @@
      
 }
 
+    namespace PhpMqtt\Client\Facades { 
+            /**
+     * 
+     *
+     * @package PhpMqtt\Client\Facades
+     * @see ConnectionManager
+     */ 
+        class MQTT {
+                    /**
+         * Gets the connection with the specified name.
+         *
+         * @param string|null $name
+         * @return \PhpMqtt\Client\Contracts\MqttClient 
+         * @throws BindingResolutionException
+         * @throws ConfigurationInvalidException
+         * @throws ConnectingToBrokerFailedException
+         * @throws ConnectionNotAvailableException
+         * @throws ProtocolNotSupportedException
+         * @static 
+         */ 
+        public static function connection($name = null)
+        {
+                        /** @var \PhpMqtt\Client\ConnectionManager $instance */
+                        return $instance->connection($name);
+        }
+                    /**
+         * Closes the given connection if opened.
+         *
+         * @param string|null $connection
+         * @throws DataTransferException
+         * @static 
+         */ 
+        public static function disconnect($connection = null)
+        {
+                        /** @var \PhpMqtt\Client\ConnectionManager $instance */
+                        return $instance->disconnect($connection);
+        }
+                    /**
+         * Publishes a message on the given connection. The QoS level will be 0.
+         *
+         * @param string $topic
+         * @param string $message
+         * @param bool $retain
+         * @param string|null $connection
+         * @throws BindingResolutionException
+         * @throws ConfigurationInvalidException
+         * @throws ConnectingToBrokerFailedException
+         * @throws ConnectionNotAvailableException
+         * @throws DataTransferException
+         * @throws ProtocolNotSupportedException
+         * @throws RepositoryException
+         * @static 
+         */ 
+        public static function publish($topic, $message, $retain = false, $connection = null)
+        {
+                        /** @var \PhpMqtt\Client\ConnectionManager $instance */
+                        return $instance->publish($topic, $message, $retain, $connection);
+        }
+         
+    }
+     
+}
+
     namespace Illuminate\Http { 
             /**
      * 
@@ -21769,6 +21832,7 @@ namespace  {
             class Flare extends \Facade\Ignition\Facades\Flare {}
             class Agent extends \Jenssegers\Agent\Facades\Agent {}
             class Livewire extends \Livewire\Livewire {}
+            class MQTT extends \PhpMqtt\Client\Facades\MQTT {}
      
 }
 
