@@ -32,7 +32,7 @@
         }
     </style>
 
-  @livewire('chatbot')
+ 
     <div class="container py-8">
         @foreach ($categories as $category)   
             <section class="mb-6">
@@ -56,31 +56,6 @@
     <script src="https://cdn.botman.io/botman/web/botman.js"></script>
         <script>
 
-
-            // Evento de clic en el botón de enviar
-            document.getElementById('send-message').addEventListener('click', function() {
-                var userMessage = document.getElementById('user-message').value;
-                addMessage('Tú', userMessage);
-                document.getElementById('user-message').value = '';
-
-                // Envía el mensaje al chatbot (puedes personalizar esta parte)
-                // Ejemplo: botman.say(userMessage);
-            });
-
-            // Crea una nueva instancia de Botman
-            var botman = new BotMan({
-                drivers: ['web'],
-                web: {
-                    driver: 'web',
-                    endpoint: '{{ route('chatbot') }}',
-                },
-            });
-
-            // Escucha las respuestas del chatbot
-            botman.listen(function (message) {
-                addMessage('Chatbot', message.text);
-            });
-                
 
             
 

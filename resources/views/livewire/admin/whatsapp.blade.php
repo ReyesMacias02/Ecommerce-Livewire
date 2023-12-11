@@ -11,8 +11,18 @@
             <p>Estado: <span id="whatsapp-status-badge">Disponible</span></p>
             <p>Nombre: Jose</p>
             <p>Número: Jose</p>
-            <button  id="startSessionButton">Abrir WhatsApp</button>
-            <button  id="scanQr">Escanear QR </button>
+            <button style="  padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;" id="startSessionButton">Abrir WhatsApp</button>
+            <button  style="  padding: 10px 20px;
+            background-color:   #3c553d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;" id="scanQr">Escanear QR </button>
        
     
     </div>
@@ -52,6 +62,10 @@
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
+            fetch("http://localhost:8000/api/sessions/default/me", requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
         });
         </script>
 
@@ -86,5 +100,9 @@
             .catch(error => console.log('error', error));
     });
     </script>
+
+
+
+
     @endpush
 </div>
