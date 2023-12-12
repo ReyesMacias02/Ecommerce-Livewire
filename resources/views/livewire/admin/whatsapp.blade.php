@@ -58,11 +58,11 @@
                 redirect: 'follow'
             };
         
-            fetch("http://localhost:8000/api/sessions/start", requestOptions)
+            fetch("https://localhost/api/sessions/start", requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
-            fetch("http://localhost:8000/api/sessions/default/me", requestOptions)
+            fetch("https://localhost/api/sessions/default/me", requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
@@ -82,7 +82,7 @@
             redirect: 'follow'
         };
     
-        fetch("http://localhost:8000/api/default/auth/qr", requestOptions)
+        fetch("https://localhost/api/default/auth/qr", requestOptions)
             .then(response => response.blob ())
             .then(blob => {
         // Crea un objeto URL para el blob

@@ -44,7 +44,7 @@
         const message = data.message;
         // Realizar la solicitud GET para enviar el mensaje de WhatsApp
         fetch(
-        `http://localhost:8000/api/sendText?phone=${phone}&text=${encodeURIComponent(message)}&session=default`
+        `https://localhost/api/sendText?phone=${phone}&text=${encodeURIComponent(message)}&session=default`
         , {
             method: 'GET',
             headers: {
